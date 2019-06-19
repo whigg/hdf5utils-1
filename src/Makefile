@@ -15,6 +15,8 @@
 # Daniel Mentiplay, 2019.
 #
 
+UNAME = ${shell uname}
+
 FC      = gfortran
 FCFLAGS = -O3 -fPIC
 FLFLAGS = -shared
@@ -49,7 +51,7 @@ dist: libhdf5utils
 	@echo
 	@echo " Packing up HDF5 utils in tar.gz"
 	@echo
-	tar cvzf libhdf5utils.tar.gz libhdf5utils.so libhdf5utils.f90 hdf5utils.mod README
+	tar cvzf libhdf5utils-$(UNAME)-$(FC).tar.gz libhdf5utils.so libhdf5utils.f90 hdf5utils.mod README
 
 .PHONY: clean
 clean:
