@@ -20,6 +20,16 @@ OBJECTS = $(FSOURCES:.f90=.o)
 main: hdf5utils.mod libhdf5utils.o libhdf5utils.so
 	$(FC) prog.f90 -L. -lhdf5utils
 
+hdf5utils.mod:
+	@echo
+	@echo " Get from libhdf5utils"
+	@echo
+
+libhdf5utils.so:
+	@echo
+	@echo " Get from libhdf5utils"
+	@echo
+
 .PHONY: clean
 clean:
 	@echo
