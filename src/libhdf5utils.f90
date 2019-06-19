@@ -1,3 +1,9 @@
+!
+! libhdf5utils.f90
+!
+! Daniel Mentiplay, David Liptai, Conrad Chan, 2019
+!
+
 module libhdf5utils
 
   use hdf5utils, only: write_real_kind4,             & ! real(4)
@@ -31,7 +37,6 @@ module libhdf5utils
                        open_hdf5group,               &
                        close_hdf5group,              &
                        HID_T
-
 
   implicit none
 
