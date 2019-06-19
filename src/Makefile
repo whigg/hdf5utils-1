@@ -54,4 +54,4 @@ clean:
 	@echo
 	@echo " Removing Fortran build files"
 	@echo
-	@rm -f *.o *.mod *.so *.dSYM
+	@rm -f *.o *.mod *.so *.dSYM *.tar.gz
