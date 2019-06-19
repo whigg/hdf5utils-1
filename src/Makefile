@@ -1,5 +1,5 @@
 #
-# HDF5 utils for Phantom, MCFOST, etc.
+# HDF5 utils for reading and writing files
 #
 # HDF5 libraries requires two directories:
 #   - include for Fortran .mod files
