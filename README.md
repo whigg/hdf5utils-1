@@ -5,8 +5,18 @@ To make use of this library, first compile it and make an archive to distribute:
 
 ```
 cd src
-make dist
+make
 ```
+
+Note that you may want to change the compiler, and specify the location of the
+HDF5 libraries:
+
+```
+make FC=ifort HDF5ROOT=/usr/local/hdf5-1.10.5
+```
+
+Alternatively, if the HDF5 library and include files are in different locations
+you can set `HDF5INCLUDE` and `HDF5LIB` separately.
 
 This makes a file `libhdf5utils-OS-FC.tar.gz` (where `OS` is either `Darwin` or
 `Linux`, and `FC` is either `ifort` or `gfortran`) with the shared object
