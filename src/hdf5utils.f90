@@ -95,7 +95,7 @@ subroutine open_hdf5group(file_id,groupname,group_id,error)
 end subroutine open_hdf5group
 
 subroutine close_hdf5group(group_id,error)
-  integer(HID_T),   intent(out) :: group_id
+  integer(HID_T),   intent(in) :: group_id
   integer,          intent(out) :: error
   call h5gclose_f(group_id,error)
 end subroutine close_hdf5group
