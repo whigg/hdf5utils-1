@@ -1,4 +1,4 @@
-module utils_hdf5
+module hdf5utils
 
  use hdf5, only: h5open_f,                    &
                  h5close_f,                   &
@@ -952,4 +952,4 @@ subroutine read_string(str,name,id,got,error)
 
 end subroutine read_string
 
-end module utils_hdf5
+end module hdf5utils

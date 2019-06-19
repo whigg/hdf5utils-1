@@ -1,4 +1,4 @@
-module lib_utils_hdf5
+module libhdf5utils
 
   use utils_hdf5, only: write_real_kind4,             & ! real(4)
                         write_real_kind8,             & ! real(8)
@@ -77,4 +77,4 @@ module lib_utils_hdf5
                      read_string                     ! strings
   end interface read_from_hdf5
 
-end module lib_utils_hdf5
+end module libhdf5utils
