@@ -37,6 +37,8 @@ FLFLAGS+= -L$(HDF5LIB) -lhdf5 -lhdf5_fortran
 FSOURCES = hdf5utils.f90
 OBJECTS = $(FSOURCES:.f90=.o)
 
+default: dist
+
 libhdf5utils: $(OBJECTS)
 	@echo
 	@echo " Linking HDF5 utils into a shared object library"
@@ -53,5 +55,12 @@ dist: libhdf5utils
 clean:
 	@echo
 	@echo " Removing Fortran build files"
+	@echo
+	@rm -f *.o *.mod *.so *.dSYM
+
+.PHONY: cleandist
+cleandist:
+	@echo
+	@echo " Removing Fortran build files and distribution files"
 	@echo
 	@rm -f *.o *.mod *.so *.dSYM *.tar.gz
